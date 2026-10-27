@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ur" dir="rtl" data-lang-page="ur">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ہم نے بہت سے قیراط گنوا دیے | سنت میں بیان کردہ اجر</title>
+<meta name="description" content="وہ عظیم اجر جن کی خبر نبی ﷺ نے دی، آئیے انہیں حاصل کریں۔ صحیح احادیث جن میں صریح ثواب کا ذکر ہے، آسان وضاحت اور عمل کے عملی طریقے کے ساتھ۔">
+<meta name="theme-color" content="#1d4f40">
+<meta property="og:title" content="ہم نے بہت سے قیراط گنوا دیے | سنت میں بیان کردہ اجر">
+<meta property="og:description" content="وہ عظیم اجر جن کی خبر نبی ﷺ نے دی، آئیے انہیں حاصل کریں۔ صحیح احادیث جن میں صریح ثواب کا ذکر ہے، آسان وضاحت اور عمل کے عملی طریقے کے ساتھ۔">
+<link rel="alternate" hreflang="ar" href="/ar/">
+<link rel="alternate" hreflang="en" href="/en/">
+<link rel="alternate" hreflang="ur" href="/ur/">
+<link rel="alternate" hreflang="id" href="/id/">
+<link rel="alternate" hreflang="fr" href="/fr/">
+<link rel="alternate" hreflang="x-default" href="/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../styles.css">
+<script>window.QARARIT_BASE="../";</script>
+<script src="../i18n/locales.js"></script>
+<script src="../i18n.js"></script>
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <button class="brand" id="brand" type="button" aria-label="العودة إلى البداية" data-i18n-attr="aria-label:brand.aria">لقد فرّطنا في قراريط كثيرة</button>
+    <div class="tools">
+      <div id="lang-picker"></div>
+      <button class="icon-btn" id="btn-search" type="button" aria-label="بحث" data-i18n-attr="aria-label:tool.search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+      </button>
+      <button class="icon-btn tk" id="btn-tashkeel" type="button" aria-pressed="true" aria-label="تشكيل النص" title="إخفاء التشكيل">
+        <span class="tk-glyph" aria-hidden="true">حَ</span><span class="tk-lbl" aria-hidden="true">التشكيل</span>
+      </button>
+      <button class="icon-btn text" id="btn-font-down" type="button" aria-label="تصغير الخط" data-i18n-attr="aria-label:tool.font.down"><span data-i18n="tool.font.glyph">أ</span><small>−</small></button>
+      <button class="icon-btn text" id="btn-font-up" type="button" aria-label="تكبير الخط" data-i18n-attr="aria-label:tool.font.up"><span data-i18n="tool.font.glyph">أ</span><small>+</small></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- واجهة البطاقات -->
+    <section id="view-deck" class="view">
+      <div class="lang-offer" id="lang-offer" hidden></div>
+      <div class="hero">
+        <h1 id="site-title">لقد فرّطنا في قراريط كثيرة</h1>
+        <p class="tagline" id="site-tagline">أجور عظيمة أخبرنا بها النبي ﷺ، فلنغتنمها</p>
+        <details class="origin" id="origin">
+          <summary data-i18n="origin.summary">من قال هذه العبارة؟</summary>
+          <div class="origin-body" id="origin-body"></div>
+        </details>
+        <p class="tr-banner" id="tr-banner" hidden></p>
+      </div>
+
+      <div class="filter-bar" id="filter-bar" hidden>
+        <span id="filter-label"></span>
+        <button type="button" class="link-btn" id="filter-clear" data-i18n="filter.clear">عرض كل الأحاديث</button>
+      </div>
+
+      <div class="deck" id="deck">
+        <p class="loading" id="loading" data-i18n="loading">جارٍ تحميل الأحاديث…</p>
+      </div>
+
+      <div class="share-box" id="share-box" hidden>
+        <p class="share-h" data-i18n="share.heading">شارك هذا الحديث</p>
+        <img id="share-img" alt="صورة بطاقة الحديث للمشاركة" data-i18n-attr="alt:share.img_alt">
+        <p class="share-hint" id="share-hint" data-i18n="share.hint">يمكنك أيضًا الضغط مطولًا على الصورة لحفظها.</p>
+        <div class="share-actions">
+          <button type="button" class="btn primary small" id="share-image" data-i18n="share.image">مشاركة الصورة</button>
+          <a class="btn small" id="share-wa" href="#" target="_blank" rel="noopener" data-i18n="share.wa">إرسال الرابط في واتساب</a>
+        </div>
+        <label for="share-url" data-i18n="share.url">رابط الحديث</label>
+        <div class="share-row">
+          <input id="share-url" type="text" readonly dir="ltr">
+          <button type="button" class="btn small" id="share-copy" data-i18n="share.copy">نسخ</button>
+        </div>
+        <button type="button" class="link-btn" id="share-close" data-i18n="share.close">إغلاق</button>
+      </div>
+
+      <nav class="deck-nav" aria-label="التنقل بين الأحاديث" data-i18n-attr="aria-label:nav.aria">
+        <div class="nav-main">
+          <button type="button" class="btn ghost square" id="btn-prev" aria-label="الحديث السابق" data-i18n-attr="aria-label:nav.prev">
+            <svg class="dir-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
+          </button>
+          <span class="counter" id="counter" aria-live="polite"></span>
+          <button type="button" class="btn primary" id="btn-next"><span data-i18n="nav.next">الحديث التالي</span>
+            <svg class="dir-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg>
+          </button>
+        </div>
+        <div class="nav-secondary">
+          <button type="button" class="btn quiet" id="btn-random">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5 14 9l5.5 1-4 3.8 1 5.7-4.5-2.7-4.5 2.7 1-5.7-4-3.8L10 9z"/></svg><span data-i18n="nav.random">اكتشف أجرًا جديدًا</span></button>
+          <button type="button" class="btn quiet" id="btn-topics" data-i18n="nav.topics">حسب الموضوع</button>
+          <button type="button" class="btn quiet" id="btn-unread"><span data-i18n="nav.unread">لم أقرأها بعد</span> <span class="count" id="unread-count">0</span></button>
+          <button type="button" class="btn quiet" id="btn-saved"><span data-i18n="nav.saved">أجور أريد اغتنامها</span> <span class="count" id="saved-count">0</span></button>
+          <a class="btn quiet" id="btn-family" href="../family/">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="8" r="3"/><circle cx="16.5" cy="9" r="2.5"/><path d="M3 19c0-3 2.2-5 5-5s5 2 5 5M13.5 19c0-2.4 1.4-4 3.5-4s3.5 1.6 3.5 4"/></svg><span data-i18n="nav.family">تحدي الأسرة</span></a>
+        </div>
+      </nav>
+    </section>
+
+    <!-- التصنيفات -->
+    <section id="view-topics" class="view page" hidden aria-labelledby="topics-h">
+      <div class="page-head">
+        <button type="button" class="back-link" data-back>
+          <svg class="dir-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg><span data-i18n="back">رجوع</span></button>
+        <h2 id="topics-h" tabindex="-1" data-i18n="topics.heading">تصفّح حسب الموضوع</h2>
+      </div>
+      <ul class="topic-list" id="topic-list"></ul>
+      <p class="local-note" data-i18n="local.read_note">يُحسب ما قرأته على هذا الجهاز فقط، ولا يحتاج إلى حساب.</p>
+    </section>
+
+    <!-- أجور أريد اغتنامها -->
+    <section id="view-saved" class="view page" hidden aria-labelledby="saved-h">
+      <div class="page-head">
+        <button type="button" class="back-link" data-back>
+          <svg class="dir-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg><span data-i18n="back">رجوع</span></button>
+        <h2 id="saved-h" tabindex="-1" data-i18n="saved.heading">أجور أريد اغتنامها</h2>
+      </div>
+      <p class="empty" id="saved-empty" data-i18n="saved.empty">قائمتك الشخصية للأعمال التي تنوي المداومة عليها. اضغط على علامة «أريد اغتنامه» أعلى أي بطاقة لتضيفها هنا. تُحفظ القائمة على جهازك فقط، بلا حساب.</p>
+      <ul class="item-list" id="saved-list"></ul>
+      <p class="local-note" data-i18n="saved.note">قائمتك وما قرأته محفوظان على هذا الجهاز وهذا المتصفح فقط، فلا ينتقلان إلى جهاز آخر، وقد يُمحيان إذا مُسحت بيانات المتصفح.</p>
+    </section>
+
+    <!-- البحث -->
+    <section id="view-search" class="view page" hidden aria-labelledby="search-h">
+      <div class="page-head">
+        <button type="button" class="back-link" data-back>
+          <svg class="dir-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg><span data-i18n="back">رجوع</span></button>
+        <h2 id="search-h" data-i18n="search.heading">بحث</h2>
+      </div>
+      <label class="search-field" for="search-input">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+        <input id="search-input" type="search" placeholder="اكتب كلمة من الحديث أو عنوانه" data-i18n-attr="placeholder:search.placeholder" autocomplete="off">
+      </label>
+      <p class="empty" id="search-empty" hidden data-i18n="search.empty">لا توجد نتائج. جرّب كلمة أخرى مثل: الجنة، الصلاة، الصيام.</p>
+      <ul class="item-list" id="search-list"></ul>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p id="pilot-notice"></p>
+    <p data-i18n="foot.sources">روابط التوثيق تحيل إلى موقع sunnah.com. لاقتراح تصحيح أو حديث، تواصل مع فريق المشروع.</p>
+  </footer>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="../app.js"></script>
+</body>
+</html>
